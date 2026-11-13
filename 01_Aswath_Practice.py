@@ -90,5 +90,5 @@ numberOfStudents = int(input("Enter the total number of students : "))
 numberOfSubjects = int(input("Enter the total number of subjects : "))
 listDetails = userInput(numberOfStudents, numberOfSubjects)
 
-print(listDetails)
+print("List collected is : ", listDetails)
 print ("Total collected list : ", len(listDetails))
