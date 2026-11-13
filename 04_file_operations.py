@@ -24,10 +24,10 @@ FILENAME = "students.txt"
 # ---------------------------------------------------------------
 # 1. Writing to a file ("w")                    (~2 min)
 # ---------------------------------------------------------------
-with open(FILENAME, "w") as f:
-    f.write("Ravi,85\n")          # \n = new line (write() does NOT add one)
-    f.write("Priya,92\n")
-    f.write("Amit,78\n")
+with open(FILENAME, "w") as fPointer:
+    fPointer.write("Ravi,85\n")          # \n = new line (write() does NOT add one)
+    fPointer.write("Priya,92\n")
+    fPointer.write("Amit,78\n")
 
 print(f"1. Wrote 3 students to {FILENAME}")
 
