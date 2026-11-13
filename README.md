@@ -16,3 +16,7 @@ Run any file with `python <filename>`. Each ends with practice exercises.
 
 See [`deep_dive/`](deep_dive/README.md) for extended, self-paced versions of each topic:
 first-principles explanations, the full range of capabilities, and 4 real-world use cases per topic.
+
+## Simple practice programs
+
+See [`practice/`](practice/README.md) for 20 short programs (5 per topic), each with a "Try it yourself" task.
