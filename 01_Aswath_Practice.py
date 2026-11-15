@@ -1,94 +1,33 @@
-# """
-# TOPIC 1: FUNCTIONS  (15 minutes)
-# ================================
-# A function is a named, reusable block of code that TAKES input (parameters)
-# and usually GIVES BACK a result using `return`.
-
-# Why use functions?
-#   - Avoid repeating code (DRY: Don't Repeat Yourself)
-#   - Break big problems into small, testable pieces
-#   - Give a meaningful name to a piece of logic
-
-# Run this file:  python 01_functions.py
-# """
-
-# # ---------------------------------------------------------------
-# # 1. Defining and calling a function            (~2 min)
-# # ---------------------------------------------------------------
-# # Syntax:
-# #   def function_name(parameters):
-# #       body
-# #       return value
-
-# def square(number):
-#     """Return the square of a number."""   # <- docstring: describes the function
-#     return number * number
-
-# result = square(7)          # calling the function; 5 is the ARGUMENT
-
-# print("1. square(7) = ", result)
-# print("   square(12) = ", square(12))
-
-# #Get the total number of students and Subjects 
-# # Implement functions to get the input marks for each student and each subject
-# def userInput(studentsTotal, subjectsTotal):
-#     listReturn = []
-#     for student in range(studentsTotal):
-#         for subject in range(subjectsTotal):
-#             marksStudents = int(input(f"Enter the student {student+1} and subject {subject+1} marks : "))
-#             listReturn.append(marksStudents)
-#     return listReturn
-
-# #[[20,20],[90,90],[90,100]] #Students marks
-# #[[20,90,90],[20, 90, 100]] #subjects marks
-
-# listDetails = []
-# numberOfStudents = int(input("Enter the total number of students : "))
-# numberOfSubjects = int(input("Enter the total number of subjects : "))
-# listDetails = userInput(numberOfStudents, numberOfSubjects)
-
-# print(listDetails)
-# # print ("Total collected list : ", len(listDetails))
-
 
 """
-TOPIC 1: FUNCTIONS  (15 minutes)
-================================
-A function is a named, reusable block of code that TAKES input (parameters)
-and usually GIVES BACK a result using `return`.
+TOPIC 1: FUNCTIONS
 
-Why use functions?
-  - Avoid repeating code (DRY: Don't Repeat Yourself)
-  - Break big problems into small, testable pieces
-  - Give a meaningful name to a piece of logic
-
-Run this file:  python 01_functions.py
+A function is a reusable block of code that takes input
+and returns a result.
 """
 
-# ---------------------------------------------------------------
-# 1. Defining and calling a function            (~2 min)
-# ---------------------------------------------------------------
-# Syntax:
-#   def function_name(parameters):
-#       body
-#       return value
 
-#Get the total number of students and Subjects 
-# Implement functions to get the input marks for each student and each subject
-def userInput(studentsTotal, subjectsTotal):
-    studentList = []
-    for student in range(studentsTotal):
-        markList = []
-        for subject in range(subjectsTotal):
-            marksStudents = int(input(f"Enter the student {student+1} and subject {subject+1} marks : "))
-            markList.append(marksStudents)
-        studentList.append(markList)
-    return studentList
+def get_student_marks(total_students, total_subjects):
+    student_marks = []
 
-listDetails = []
-numberOfStudents = int(input("Enter the total number of students : "))
-numberOfSubjects = int(input("Enter the total number of subjects : "))
-listDetails = userInput(numberOfStudents, numberOfSubjects)
+    for student in range(total_students):
+        marks_list = []
 
-print("List collected is : ", listDetails)
-print ("Total collected list : ", len(listDetails))
+        for subject in range(total_subjects):
+            marks = int(input(
+                f"Enter the student {student + 1} and subject {subject + 1} marks: "
+            ))
+            marks_list.append(marks)
+
+        student_marks.append(marks_list)
+
+    return student_marks
+
+
+total_students = int(input("Enter the total number of students: "))
+total_subjects = int(input("Enter the total number of subjects: "))
+
+student_details = get_student_marks(total_students, total_subjects)
+
+print("List collected is:", student_details)
+print("Total number of students:", len(student_details))
