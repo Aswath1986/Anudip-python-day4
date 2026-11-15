@@ -75,6 +75,7 @@ Run this file:  python 01_functions.py
 
 #Get the total number of students and Subjects 
 # Implement functions to get the input marks for each student and each subject
+
 def userInput(studentsTotal, subjectsTotal):
     studentList = []
     for student in range(studentsTotal):
@@ -85,10 +86,18 @@ def userInput(studentsTotal, subjectsTotal):
         studentList.append(markList)
     return studentList
 
-listDetails = []
 numberOfStudents = int(input("Enter the total number of students : "))
 numberOfSubjects = int(input("Enter the total number of subjects : "))
+
 listDetails = userInput(numberOfStudents, numberOfSubjects)
 
 print("List collected is : ", listDetails)
-print ("Total collected list : ", len(listDetails))
+print("Total collected list : ", len(listDetails))
+
+for i in range(len(listDetails)):
+    total = sum(listDetails[i])
+    average = total / numberOfSubjects
+
+    print("Student", i+1)
+    print("Total marks : ", total)
+    print("Average marks : ", average)
