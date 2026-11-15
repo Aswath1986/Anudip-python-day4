@@ -62,7 +62,7 @@ safe_divide(None, 5)
 print("\n4. Reading the error message:")
 numbers = [10, 20, 30]
 try:
-    print(numbers[5])
+    print(numbers[6])
 except IndexError as e:
     print("   Caught IndexError ->", e)
 
@@ -74,7 +74,7 @@ except KeyError as e:
 
 # Catch-all (use carefully — put it LAST):
 try:
-    value = int("12.5")
+    value = int("11.5")
 except Exception as e:
     print(f"   Caught {type(e).__name__} -> {e}")
 
@@ -93,7 +93,7 @@ def convert_age(text):
         # runs only when NO exception happened
         print(f"   Valid age entered: {age}")
 
-convert_age("25")
+convert_age("22")
 convert_age("twenty")
 
 
