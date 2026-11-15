@@ -25,9 +25,9 @@ def square(number):
     return number * number
 
 
-result = square(5)          # calling the function; 5 is the ARGUMENT
-print("1. square(5) =", result)
-print("   square(12) =", square(12))
+result = square(10)          # calling the function; 5 is the ARGUMENT
+print("1. square(10) =", result) #100
+print("   square(4) =", square(4)) #16
 
 
 # ---------------------------------------------------------------
@@ -41,8 +41,8 @@ def calculate_total(price, quantity):
     return price * quantity
 
 
-print("\n2. add(10, 20) =", add(10, 20))
-print("   Total bill =", calculate_total(250, 3))
+print("\n2. add(20, 30) =", add(20, 30)) #50
+print("   Total bill =", calculate_total(200, 5))#1000
 
 
 # ---------------------------------------------------------------
@@ -54,8 +54,8 @@ def greet(name, message="Welcome to Anudip!"):
     return f"Hello {name}, {message}"
 
 
-print("\n3.", greet("Ravi"))
-print("  ", greet("Priya", "Good morning!"))
+print("\n3.", greet("Yash"))
+print("  ", greet("Yash", "Good morning!"))
 
 
 # ---------------------------------------------------------------
@@ -67,7 +67,7 @@ def student_info(name, age, city):
     return f"{name} is {age} years old and lives in {city}"
 
 
-print("\n4.", student_info(age=20, city="Kolkata", name="Amit"))
+print("\n4.", student_info(age=21, city="Coimbatore", name="Abi"))
 
 
 # ---------------------------------------------------------------
@@ -82,7 +82,7 @@ def min_max_avg(numbers):
     return smallest, largest, average
 
 
-marks = [78, 92, 65, 88, 71]
+marks = [70, 92, 60, 88, 71]
 low, high, avg = min_max_avg(marks)
 print(f"\n5. Lowest: {low}, Highest: {high}, Average: {avg:.2f}")
 
@@ -108,7 +108,7 @@ def is_even(n):
 print("\n6. Grades:")
 for m in marks:
     print(f"   {m} -> {get_grade(m)}")
-print("   Is 10 even?", is_even(10))
+print("   Is 12 even?", is_even(12))
 
 
 # ---------------------------------------------------------------
@@ -119,7 +119,7 @@ print("   Is 10 even?", is_even(10))
 company = "Anudip"            # global variable
 
 def show_scope():
-    trainee = "Neha"          # local variable
+    trainee = "priya"          # local variable
     print(f"\n7. Inside function: {trainee} works at {company}")
 
 show_scope()
@@ -133,7 +133,7 @@ def area_of_circle(radius):
     return 3.14159 * square(radius)    # re-using square() from above
 
 
-print("\n8. Area of circle with radius 7 =", round(area_of_circle(7), 2))
+print("\n8. Area of circle with radius 5 =", round(area_of_circle(5), 2))
 
 
 # ---------------------------------------------------------------

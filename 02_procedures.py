@@ -38,8 +38,8 @@ def print_multiplication_table(n, upto=10):
         print(f"  {n} x {i:2} = {n * i}")
 
 
-print_multiplication_table(7)
-print_multiplication_table(3, upto=5)
+print_multiplication_table(8)
+print_multiplication_table(4, upto=5)
 
 
 # ---------------------------------------------------------------
@@ -54,10 +54,10 @@ def add_procedure(a, b):         # PROCEDURE: just prints, gives nothing back
 
 
 print("\nFunction vs Procedure:")
-x = add_function(4, 5)
+x = add_function(5, 5)
 print("  Value from function:", x)        # 9  -> we can reuse it
 
-y = add_procedure(4, 5)
+y = add_procedure(6, 5)
 print("  Value from procedure:", y)       # None -> nothing came back!
 
 # Key point for students:
@@ -89,9 +89,9 @@ def display_students(student_list):
 
 print("\nManaging a class list:")
 batch = []
-add_student(batch, "Ravi")
-add_student(batch, "Priya")
-add_student(batch, "Amit")
+add_student(batch, "Yash")
+add_student(batch, "Varshini")
+add_student(batch, "Anu")
 display_students(batch)
 remove_student(batch, "Priya")
 remove_student(batch, "Rahul")
@@ -111,7 +111,7 @@ def withdraw(balance, amount):
 
 
 print("\nATM:")
-withdraw(1000, 300)
+withdraw(2000, 300)
 withdraw(1000, 5000)
 
 
@@ -132,7 +132,7 @@ def print_report_card(name, marks):
 
 
 print()
-print_report_card("Neha", {"Maths": 88, "Science": 92, "English": 79})
+print_report_card("Neha", {"Maths": 89, "Science": 95, "English": 79})
 
 
 # ---------------------------------------------------------------
